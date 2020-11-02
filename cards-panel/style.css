@@ -76,7 +76,7 @@ body {
 }
 
 /* Using css grid to layout the content of the card and styling the avatar image, 
-the SVG graphic half-circle below it, and the author name */
+the SVG graphic half-circle below it, the author name, and the tags */
 .card-author {
   position: relative;
   display: grid;
@@ -112,4 +112,36 @@ the SVG graphic half-circle below it, and the author name */
   font-style: normal;
   font-weight: 700;
   color: #7a7a8c;
+}
+
+.tags {
+  margin: 1rem 0 2rem;
+  padding: 0.5rem 0 1rem;
+  line-height: 2;
+  margin-bottom: 0;
+}
+
+.tags a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.5rem;
+  color: #7a7a8c;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.66rem;
+  border: 3px solid #28242f;
+  border-radius: 2rem;
+  padding: 0.2rem 0.85rem 0.25rem;
+  position: relative;
+}
+
+.tags a:hover {
+  background: linear-gradient(90deg, #87ceeb, #ee82ee);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  background-clip: text;
+  border-color: white;
 }
