@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap");
+
+body {
+  font-family: "Caveat", cursive;
+  margin: 0;
+  padding: 0;
+  background: #17141d;
+  color: #ffffff;
+}
+
+.cardsPanel {
+  display: flex;
+  padding: 3rem;
+  overflow-x: scroll;
+}
+
+/* Styling the scrollbar for our panel (on supported browsers)*/
+.cardsPanel::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.cardsPanel::-webkit-scrollbar-thumb {
+  background: #201c29;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+.cardsPanel::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1.5rem;
+  /* adding fixed height and width values for each card */
+  height: 350px;
+  width: 400px;
+  /* adding min-width for responsiveness */
+  min-width: 250px;
+
+  /* making each card stand out */
+  box-shadow: -1rem 0 3rem #000000;
+  background: #17141d;
+  color: #ffffff;
+
+  /* to make all the animations smooth */
+  transition: 0.2s;
+}
+
+/* to make the cards seem like they are partially on top of each other */
+.card:not(:first-child) {
+  margin-left: -130px;
+}
+
+/* Animation for each card element -
+ Move the card up a little, push all the cards after it to the right
+ which makes space for the entire card's content to be visible */
+.card:hover {
+  transform: translateY(-1rem);
+}
+.card:hover ~ .card {
+  transform: translateX(130px);
+}
